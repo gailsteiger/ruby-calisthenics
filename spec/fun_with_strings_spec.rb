@@ -46,6 +46,8 @@ describe 'anagram grouping', :pending => true do
       ''.anagram_groups.should == []
     end
     it 'should return an array of arrays for nonempty string [5 points]' do
+      'x'.anagram_groups.should be_an Array
+      'x'.anagram_groups.should_not == []
       'x'.anagram_groups.each { |element| element.should be_an Array }
     end
   end
